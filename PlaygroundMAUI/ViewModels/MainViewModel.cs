@@ -1,21 +1,43 @@
-﻿using System.Collections.ObjectModel;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
 
 namespace PlaygroundMAUI.ViewModels
 {
     public class MainViewModel : INotifyPropertyChanged
     {
-        public ObservableCollection<string> Items { get; private set; }
-
         public MainViewModel()
         {
-            var results = new ObservableCollection<string>();
-            for (int i = 0; i < 100; i++)
+        }
+
+        private bool _bottomContentVisible = false;
+
+        public bool BottomContentVisible
+        {
+            get { return _bottomContentVisible; }
+            set
             {
-                results.Add($"Test item {i}");
+                _bottomContentVisible = value;
+                OnPropertyChanged(nameof(BottomContentVisible));
             }
-            Items = results;
+        }
+
+        private ICommand _saveCommand;
+
+        public ICommand TapButtonCommand
+        {
+            get
+            {
+                if (_saveCommand == null)
+                {
+                    _saveCommand = new Command(async () =>
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Button work", "Button worked tapped", "OK");
+                    });
+                }
+
+                return _saveCommand;
+            }
         }
 
         #region INotifyPropertyChanged
