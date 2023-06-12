@@ -1,4 +1,67 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PlaygroundMAUI.MainPage" />
+             xmlns:viewModel="clr-namespace:PlaygroundMAUI.ViewModels"
+             x:DataType="viewModel:MainViewModel"
+             x:Class="PlaygroundMAUI.MainPage">
+    <ScrollView>
+        <StackLayout Spacing="25">
+            <StackLayout Padding="0"
+                         Spacing="4">
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+            </StackLayout>
+            <Switch IsToggled="{Binding BottomContentVisible}" />
+            <StackLayout Padding="0"
+                         IsVisible="{Binding BottomContentVisible}"
+                         Spacing="4">
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+                <Label Text="Lorem ipsum dolor sit amet" />
+            </StackLayout>
+            <Entry Placeholder="Lorem ipsum dolor sit amet"
+                   IsVisible="{Binding BottomContentVisible}" />
+            <Button Text="Lorem ipsum"
+                    Padding="0,25,0,0"
+                    BackgroundColor="MediumPurple"
+                    BorderWidth="1"
+                    BorderColor="Blue"
+                    Command="{Binding TapButtonCommand}" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
