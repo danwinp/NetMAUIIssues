@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             ios:Page.UseSafeArea="False"
+             x:Class="PaddingGridIssue.MainPage">
+    <Grid RowDefinitions="*,Auto"
+          IgnoreSafeArea="True"
+          Padding="20,20,20,0"
+          ColumnDefinitions="*">
+        <Grid RowDefinitions="Auto, Auto, Auto"
+              IgnoreSafeArea="True"
+              Grid.Row="0"
+              Grid.Column="0"
+              ColumnDefinitions="*">
+            <Label Text="Ssssss the fffffffff yyyy yyy wwwww llll tt uuuuuu:"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   FontSize="Medium" />
+            <Button Text="Select this button"
+                    Grid.Row="1"
+                    Grid.Column="0" />
+            <Frame Grid.Row="2"
+                   Grid.Column="0">
+                <Grid IgnoreSafeArea="True">
+                    <Picker Title="Test picker" />
+                </Grid>
+            </Frame>
+        </Grid>
+        <Button Text="Select this button"
+                VerticalOptions="End"
+                Grid.Row="1"
+                Grid.Column="0" />
+    </Grid>
+</ContentPage>
