@@ -2,17 +2,15 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
-             ios:Page.UseSafeArea="False"
              x:Class="PaddingGridIssue.MainPage">
     <Grid RowDefinitions="*,Auto"
-          IgnoreSafeArea="True"
           Padding="20,20,20,0"
           ColumnDefinitions="*">
         <Grid RowDefinitions="Auto, Auto, Auto"
-              IgnoreSafeArea="True"
               Grid.Row="0"
               Grid.Column="0"
               ColumnDefinitions="*">
+            <!--The length of the text below helps trigger the padding issue-->
             <Label Text="Ssssss the fffffffff yyyy yyy wwwww llll tt uuuuuu:"
                    Grid.Row="0"
                    Grid.Column="0"
@@ -22,7 +20,7 @@
                     Grid.Column="0" />
             <Frame Grid.Row="2"
                    Grid.Column="0">
-                <Grid IgnoreSafeArea="True">
+                <Grid>
                     <Picker Title="Test picker" />
                 </Grid>
             </Frame>
