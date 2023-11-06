@@ -1,2 +1,2 @@
-# NetMAUICollectionViewIssue
-Reproduction of CollectionView rotation issues in .NET MAUI
+# NetMAUIIssues
+Reproduction of issues in .NET MAUI
