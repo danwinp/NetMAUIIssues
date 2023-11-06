@@ -3,31 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
              x:Class="PaddingGridIssue.MainPage">
-    <Grid RowDefinitions="*,Auto"
-          Padding="20,20,20,0"
-          ColumnDefinitions="*">
-        <Grid RowDefinitions="Auto, Auto, Auto"
-              Grid.Row="0"
-              Grid.Column="0"
-              ColumnDefinitions="*">
-            <!--The length of the text below helps trigger the padding issue-->
-            <Label Text="Ssssss the fffffffff yyyy yyy wwwww llll tt uuuuuu:"
-                   Grid.Row="0"
-                   Grid.Column="0"
-                   FontSize="Medium" />
-            <Button Text="Select this button"
-                    Grid.Row="1"
-                    Grid.Column="0" />
-            <Frame Grid.Row="2"
-                   Grid.Column="0">
-                <Grid>
-                    <Picker Title="Test picker" />
-                </Grid>
-            </Frame>
-        </Grid>
-        <Button Text="Select this button"
-                VerticalOptions="End"
-                Grid.Row="1"
-                Grid.Column="0" />
-    </Grid>
+    <Button Text="Next page"
+            Clicked="NextPage"
+            VerticalOptions="Center"
+            Grid.Row="1"
+            Grid.Column="0" />
 </ContentPage>
